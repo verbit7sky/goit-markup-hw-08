@@ -1,0 +1,30 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.item {
+  list-style: none;
+}
+
+.link,
+.link:visited {
+  text-decoration: none;
+  color: inherit;
+}
