@@ -1,24 +1,33 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
   .container {
     display: flex;
-  }
-  .link {
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
 .nav {
   display: flex;
   align-items: center;
+  // .link {
+  //   padding-top: 32px;
+  //   padding-bottom: 32px;
+  // }
 }
 
 .nav-menu {
   display: flex;
   justify-content: start;
+  .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   & .item + .item {
     margin-left: 50px;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }
 
@@ -46,6 +55,7 @@
 }
 
 .nav-menu__link--active {
+  color: var(--accent-color);
   &::after {
     display: block;
     position: absolute;
@@ -59,16 +69,34 @@
 }
 
 .header-contacts {
-  display: flex;
+  display: none;
+  // display: flex;
   margin-left: auto;
   align-items: center;
-  & .item + .item {
-    margin-left: 50px;
+  // .link {
+  //   padding-top: 32px;
+  //   padding-bottom: 32px;
+  // }
+  // & .item + .item {
+  //   margin-left: 50px;
+  // }
+
+  @media screen and (min-width: 767px) {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
 .header-contacts__item {
-  display: inline-block;
+  // display: inline-block;
+  display: block;
 }
 
 .header-contacts__icon {
@@ -92,8 +120,8 @@
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--text-color);
 
@@ -103,5 +131,154 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.header-contacts__mail {
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: unset;
+    margin-right: 30px;
+  }
+}
+
+// Мобильное меню
+
+.open-menu-btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: relative;
+  padding: 48px 40px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-nav-menu__link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: var(--main-title-color);
+}
+
+.mobile-nav-menu__link--active {
+  color: var(--accent-color);
+}
+
+.mobile-cotacts {
+  position: absolute;
+  bottom: 134px;
+}
+
+.mobile-cotacts__phone {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+
+  color: var(--accent-color);
+}
+
+.mobile-cotacts__mail {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color);
+}
+
+.mobile-social {
+  position: absolute;
+  display: flex;
+  bottom: 48px;
+}
+
+.mobile-social__item {
+  position: relative;
+  margin-right: 21px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:not(:first-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+
+    width: 22px;
+    height: 0px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
+}
+
+.mobile-social__link {
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}
+
+.close-mobile-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  color: var(--main-title-color);
+  background-color: transparent;
+  border: none;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
   }
 }
