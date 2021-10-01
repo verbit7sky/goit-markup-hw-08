@@ -61,6 +61,7 @@
 }
 
 .skills-list__titles {
+  text-align: center;
   margin-top: 30px;
   font-weight: 700;
   font-size: 14px;
@@ -68,6 +69,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-title-color);
+
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
 }
 
 .skills-list__text {

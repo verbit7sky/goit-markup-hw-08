@@ -444,7 +444,7 @@ ul {
   padding-top: 118px;
   max-width: 1600px;
   height: 400px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/Img-hero-mob-min.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img-hero-mob-min.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -452,7 +452,7 @@ ul {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/Img-hero-mob-@2x-min.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img-hero-mob-@2x-min.jpg");
   }
 }
 
@@ -465,13 +465,13 @@ ul {
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/Img-hero-tab-min.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img-hero-tab-min.jpg");
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/Img-hero-tab-@2x-min.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img-hero-tab-@2x-min.jpg");
   }
 }
 
@@ -480,13 +480,13 @@ ul {
     max-width: 1600px;
     height: 600px;
     padding-top: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/Img-hero-desk-min.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img-hero-desk-min.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/Img-hero-desk-@2x-min.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img-hero-desk-@2x-min.jpg");
   }
 }
 
@@ -589,6 +589,7 @@ ul {
 }
 
 .skills-list__titles {
+  text-align: center;
   margin-top: 30px;
   font-weight: 700;
   font-size: 14px;
@@ -596,6 +597,12 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-title-color);
+}
+
+@media screen and (min-width: 768px) {
+  .skills-list__titles {
+    text-align: start;
+  }
 }
 
 .skills-list__text {
@@ -675,24 +682,15 @@ ul {
   }
 }
 
-.command__title {
-  text-align: center;
-}
-
 .command-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -30px;
 }
 
 @media screen and (min-width: 768px) {
   .command-list {
     margin-left: -30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .command-list {
-    margin-top: 50px;
   }
 }
 
@@ -770,11 +768,19 @@ ul {
 
 .title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .command-item__name {
@@ -964,13 +970,6 @@ ul {
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
-  margin-top: 30px;
-}
-
-@media screen and (min-width: 1200px) {
-  .clients-list {
-    margin-top: 50px;
-  }
 }
 
 /* .clients-list > .item + .item {
